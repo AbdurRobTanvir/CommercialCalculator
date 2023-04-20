@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body{
+    width: 350px;
+    margin: auto;
+    color: #ffffff;
+}
+.calculator{
+    background-color: #000000;
+    height: 500px;
+    padding: 20px;
+}
+.result-box{
+    padding-top: 80px;
+    font-size: 35px;
+    position: relative;
+}
+#result{
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+.value-wrapper{
+    margin: 0 -5px;
+}
+.value{
+    float: left;
+    width: 25%;
+    padding: 5px 5px;
+    font-size: 28px;
+}
+.value-different{
+    width: 50%;
+}
+.value a{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #373737;
+    padding: 17px 15px 17px 28px;
+}
+#ac-button{
+    background-color: #909090;
+    padding-left: 15px;
+}
+#plusminus-button{
+    padding-left: 20px;
+    background-color: #909090;
+}
+#percent-button{
+    padding-left: 24px;
+    background-color: #909090;
+}
+#divide-button{
+    padding-left: 33px;
+    background-color: #ffa500;
+}
+#multiply-button{
+    padding-left: 29px;
+    background-color: #ffa500;
+}
+#minus-button{
+    background-color: #ffa500;
+}
+#plus-button{
+    background-color: #ffa500;
+}
+#zero-button{
+    border-radius: 35%;
+}
+#dot-button{
+    padding-left: 30px;
+}
+#equal-button{
+    background-color: #ffa500;
+}

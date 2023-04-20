@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CommercialCalculator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="result-box">
+            <div id="result">
+                0
+            </div>
+        </div>
+        <div class="clearfix value-wrapper">
+            <div class="value">
+                <a href="#" id="ac-button" onclick="resetAll()">
+                    AC
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="plusminus-button">
+                    +/-
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="percent-button">
+                    &percnt;
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="divide-button" onclick="value('/')">
+                    &#47;
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="seven-button" onclick="value('7')">
+                    7
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="eight-button" onclick="value('8')">
+                    8
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="nine-button" onclick="value('9')">
+                    9
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="multiply-button" onclick="value('*')">
+                    &lowast;
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="four-button" onclick="value('4')">
+                    4
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="five-button" onclick="value('5')">
+                    5
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="six-button" onclick="value('6')">
+                    6
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="minus-button" onclick="value('-')">
+                    &minus;
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="one-button" onclick="value('1')">
+                    1
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="two-button" onclick="value('2')">
+                    2
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="three-button" onclick="value('3')">
+                    3
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="plus-button" onclick="value('+')">
+                    &plus;
+                </a>
+            </div>
+            <div class="value value-different">
+                <a href="#" id="zero-button" onclick="value('0')">
+                    0
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="dot-button" onclick="value('.')">
+                    &bull;
+                </a>
+            </div>
+            <div class="value">
+                <a href="#" id="equal-button" onclick="value('=')">
+                    &equals;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
