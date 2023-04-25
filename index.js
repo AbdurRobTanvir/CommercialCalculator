@@ -1,25 +1,26 @@
 var firstValue = "";
 var secondValue = "";
 var sign = "";
-var firstValueHave = false;
-var secondValueHave = false;
-var signHave = false;
-
+var hasFirstValue = false;
+var hasSecondValue = false;
+var hasSign = false;
+var valueAfterEqual = false;
 
 function operator(attribute) {
-    if (signHave == false) {
+    if (hasSign == false) {
         if (attribute === '=') {
             firstValue = "";
         }
 
         else {
             sign = attribute;
-            firstValueHave = true;
-            signHave = true;
+            hasFirstValue = true;
+            hasSign = true;
+            valueAfterEqual = false;
         }
     }
-    
-    else if (firstValueHave == true && signHave == true) {
+
+    else if (hasFirstValue == true && hasSign == true) {
         firstValue = +firstValue;
         secondValue = +secondValue;
 
@@ -27,36 +28,36 @@ function operator(attribute) {
             var total = firstValue + secondValue;
         }
 
-        else if (sign === '-') {
+        if (sign === '-') {
             var total = firstValue - secondValue;
         }
 
-        else if (sign === '*') {
+        if (sign === '*') {
             var total = firstValue * secondValue;
         }
 
-        else if (sign === '/') {
+        if (sign === '/') {
             var total = firstValue / secondValue;
         }
 
         if (attribute === '=') {
-            signHave = false;
+            hasSign = false;
+            valueAfterEqual = true;
         }
+
         document.getElementById("result").innerHTML = total;
         sign = attribute;
         firstValue = total;
-        secondValueHave = false;
+        hasSecondValue = false;
         secondValue = "";
     }
 }
 
 function value(attribute) {
-    if (firstValueHave == false && signHave == false) {
+    if ((hasFirstValue == false && hasSign == false) || valueAfterEqual == true) {
 
-        if (firstValue.includes(".")) {
-            if (attribute === '.') {
-                attribute = "";
-            }
+        if (valueAfterEqual == true) {
+            firstValue = "";
         }
         firstValue = firstValue + attribute;
 
@@ -70,11 +71,15 @@ function value(attribute) {
         if (firstValue.startsWith(".")) {
             firstValue = 0. + firstValue;
         }
-
+        if (firstValue.includes(".")) {
+            if (attribute === '.') {
+                attribute = "";
+            }
+        }
         document.getElementById("result").innerHTML = firstValue;
-
     }
-    else if (secondValueHave == false && signHave == true) {
+
+    else if (hasSecondValue == false && hasSign == true) {
 
         if (secondValue.includes(".")) {
             if (attribute === '.') {
@@ -102,10 +107,10 @@ function value(attribute) {
 function resetAll() {
     firstValue = "";
     secondValue = "";
-    firstValueHave = false;
-    secondValueHave = false;
+    hasFirstValue = false;
+    hasSecondValue = false;
     sign = "";
-    signHave = false;
+    hasSign = false;
     total = "";
     document.getElementById("result").innerHTML = "0";
 }
