@@ -18,6 +18,9 @@ function value(attribute) {
 
         if (firstValue.startsWith("0")) {
             firstValue = firstValue.replace("0", "");
+            if (firstValue === "") {
+                firstValue = "0";
+            }
         }
 
         if (firstValue.startsWith(".")) {
@@ -56,6 +59,9 @@ function value(attribute) {
 
         if (secondValue.startsWith("0")) {
             secondValue = secondValue.replace("0", "");
+            if (secondValue === "") {
+                secondValue = "0";
+            }
         }
 
         if (secondValue.startsWith(".")) {
