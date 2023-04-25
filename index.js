@@ -62,12 +62,15 @@ function value(attribute) {
     else if (firstValueHave == true && signHave == true && (attribute === '+' || attribute === '-' || attribute === '*' || attribute === '/' || attribute === '=')) {
         firstValue = +firstValue;
         secondValue = +secondValue;
-        
+
         if (sign === '+') {
             var total = firstValue + secondValue;
             console.log(total);
             document.getElementById("result").innerHTML = total;
             sign = attribute;
+            if (attribute === '=') {
+                signHave = false;
+            }
         }
 
         else if (sign === '-') {
@@ -75,13 +78,19 @@ function value(attribute) {
             console.log(total);
             document.getElementById("result").innerHTML = total;
             sign = attribute;
+            if (attribute === '=') {
+                signHave = false;
+            }
         }
-        
+
         else if (sign === '*') {
             var total = firstValue * secondValue;
             console.log(total);
             document.getElementById("result").innerHTML = total;
             sign = attribute;
+            if (attribute === '=') {
+                signHave = false;
+            }
         }
 
         else if (sign === '/') {
@@ -89,14 +98,10 @@ function value(attribute) {
             console.log(total);
             document.getElementById("result").innerHTML = total;
             sign = attribute;
+            if (attribute === '=') {
+                signHave = false;
+            }
         }
-
-        else if (sign === '=') {
-            document.getElementById("result").innerHTML = total;
-            signHave = false;
-            sign = "";
-        }
-
         firstValue = total;
         console.log(firstValue);
         secondValueHave = false;
@@ -104,7 +109,7 @@ function value(attribute) {
     }
 }
 
-function resetAll(){
+function resetAll() {
     firstValue = "";
     secondValue = "";
     firstValueHave = false;
