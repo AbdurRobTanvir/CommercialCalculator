@@ -73,36 +73,24 @@ function value(attribute) {
 
         if (sign === '+') {
             var total = firstValue + secondValue;
-            // console.log(total);
-            // document.getElementById("result").innerHTML = total;
-            // sign = attribute;
         }
 
         else if (sign === '-') {
             var total = firstValue - secondValue;
-            // console.log(total);
-            // document.getElementById("result").innerHTML = total;
-            // sign = attribute;
         }
 
         else if (sign === '*') {
             var total = firstValue * secondValue;
-            // console.log(total);
-            // document.getElementById("result").innerHTML = total;
-            // sign = attribute;
         }
 
         else if (sign === '/') {
             var total = firstValue / secondValue;
-            // console.log(total);
-            // document.getElementById("result").innerHTML = total;
-            // sign = attribute;
         }
 
         if (attribute === '=') {
             signHave = false;
         }
-        
+
         console.log(total);
         document.getElementById("result").innerHTML = total;
         sign = attribute;
