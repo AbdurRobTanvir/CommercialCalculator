@@ -16,12 +16,16 @@ function value(attribute) {
         }
         firstValue = firstValue + attribute;
 
+        if (firstValue.startsWith("0")) {
+            firstValue = firstValue.replace("0", "");
+        }
+
         if (firstValue.startsWith(".")) {
             firstValue = 0. + firstValue;
         }
 
         console.log(firstValue);
-        document.getElementById("result").innerHTML = firstValue;;
+        document.getElementById("result").innerHTML = firstValue;
 
 
     }
@@ -49,6 +53,10 @@ function value(attribute) {
         }
 
         secondValue = secondValue + attribute;
+
+        if (secondValue.startsWith("0")) {
+            secondValue = secondValue.replace("0", "");
+        }
 
         if (secondValue.startsWith(".")) {
             secondValue = 0. + secondValue;
