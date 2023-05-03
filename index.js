@@ -55,7 +55,11 @@ function operator(attribute) {
 
 function value(attribute) {
     if ((hasFirstValue == false && hasSign == false) || valueAfterEqual == true) {
-
+        if (firstValue.includes(".")) {
+            if (attribute === '.') {
+                attribute = "";
+            }
+        }
         if (valueAfterEqual == true) {
             firstValue = "";
         }
@@ -71,11 +75,7 @@ function value(attribute) {
         if (firstValue.startsWith(".")) {
             firstValue = 0. + firstValue;
         }
-        if (firstValue.includes(".")) {
-            if (attribute === '.') {
-                attribute = "";
-            }
-        }
+
         document.getElementById("result").innerHTML = firstValue;
     }
 
