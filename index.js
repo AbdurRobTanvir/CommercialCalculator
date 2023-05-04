@@ -55,13 +55,14 @@ function operator(attribute) {
 
 function value(attribute) {
     if ((hasFirstValue == false && hasSign == false) || valueAfterEqual == true) {
-        if (firstValue.includes(".")) {
+
+        if (valueAfterEqual == true) {
+            firstValue = "";
+        }
+                if (firstValue.includes(".")) {
             if (attribute === '.') {
                 attribute = "";
             }
-        }
-        if (valueAfterEqual == true) {
-            firstValue = "";
         }
         firstValue = firstValue + attribute;
 
